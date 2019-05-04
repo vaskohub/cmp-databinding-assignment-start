@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <app-game-control (numberEvent)="addOddEven($event)"></app-game-control>
+  <hr>
+  <div class="row">
+
+    <div class="col-6">
+      <div *ngFor="let num of odds" class="row mt-1 justify-content-center">
+        <app-odd [componentNumber]="num"></app-odd>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div *ngFor="let num of evens" class="row mt-1 justify-content-center">
+        <app-even [componentNumber]="num"></app-even>
+      </div>
+    </div>
+
+  </div>
+</div>
